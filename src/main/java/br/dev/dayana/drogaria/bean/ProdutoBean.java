@@ -89,6 +89,7 @@ public class ProdutoBean implements Serializable {
 
 			produto = new Produto();
 
+			
 			FabricanteDAO fabricanteDAO = new FabricanteDAO();
 			fabricantes = fabricanteDAO.listar();
 
