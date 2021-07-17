@@ -1,0 +1,33 @@
+package br.dev.dayana.drogaria.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@SuppressWarnings("serial")
+@Entity // serve para dizer que o estado é uma entidade do hibernate - gera uma tabela, como nome de estado. colunas com nomes sigla, codigo e nome herdando da classe a chave primária
+public class Estado extends GenericDomain { 
+	@Column(length = 2, nullable = false) // personaliza cada atributo
+	private String sigla;
+	
+	@Column(length = 50, nullable = false)
+	private String nome;
+
+	public String getSigla() {
+		return sigla;
+	}
+	
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	
+
+}
