@@ -82,13 +82,15 @@ public class ProdutoBean implements Serializable {
 		}	
 	}
 	
+	/*
+	 * Método salvar
+	 */
 	public void salvar() {
 		try {
 			ProdutoDAO produtoDAO = new ProdutoDAO();
 			produtoDAO.merge(produto);
 
 			produto = new Produto();
-
 			
 			FabricanteDAO fabricanteDAO = new FabricanteDAO();
 			fabricantes = fabricanteDAO.listar();
